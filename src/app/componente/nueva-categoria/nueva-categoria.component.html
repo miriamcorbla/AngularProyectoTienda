@@ -1,0 +1,42 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <div class="container mt-5 mb-5 d-flex justify-content-center">
+        <div class="card px-1 py-4">
+            <div class="card-body">
+                <div class="row">
+                    <h4 class="title">Añadir Categoría</h4>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Nombre" aria-describedby="nameHelp"> 
+                            <p id="nameHelp" class="fs-6 fst-italic nameHelp">El nombre debe tener una longitud mínima de 5 caracteres</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Descripción">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <button routerLink="/categorias" class="btn btn-primary confirm-button buttons">Cancelar</button>
+                    <button class="btn btn-success confirm-button buttons">Añadir</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
