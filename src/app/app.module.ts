@@ -8,13 +8,17 @@ import { CategoriaComponent } from './componente/categoria/categoria.component';
 import { NuevaCategoriaComponent } from './componente/nueva-categoria/nueva-categoria.component';
 import { FormsModule } from '@angular/forms';
 import { EditCategoriaComponent } from './componente/edit-categoria/edit-categoria.component';
+import { HeaderComponent } from './componente/header/header.component';
+import { FooterComponent } from './componente/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CategoriaComponent,
     NuevaCategoriaComponent,
-    EditCategoriaComponent
+    EditCategoriaComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

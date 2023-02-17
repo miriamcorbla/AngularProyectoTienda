@@ -1,5 +1,5 @@
 body {
-    color: #566787;
+    background-color: #EDEFF0;
     font-family: 'Varela Round', sans-serif;
     font-size: 13px;
 }
@@ -9,7 +9,7 @@ body {
 /* contenido de la tabla */
 .table-wrapper {
     min-width: 1000px;
-    background: #eaf1ff48;
+    background: #ffffff;
     padding: 20px 25px;
     border-radius: 3px;
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
@@ -27,9 +27,7 @@ body {
     margin: 5px 0 0;
     font-size: 24px;
 }
-.table-title .btn-group {
-    float: right;
-}
+/*Botones que se encuentran en la cabecera de la tabla*/
 .table-title .btn {
     color: #fff;
     float: right;
@@ -46,10 +44,11 @@ body {
     font-size: 21px;
     margin-right: 5px;
 }
-.table-title .btn span {
+.table-title .btn span { /*anchura y centrado*/
     float: left;
     margin-top: 2px;
 }
+/*Las columnas y filas*/
 table.table tr th, table.table tr td {
     border-color: #e9e9e9;
     padding: 12px 15px;
@@ -63,10 +62,10 @@ table.table tr th:last-child {
 }
 /*Color de las filas coloreadas alternas*/
 table.table-striped tbody tr:nth-of-type(odd) {
-    background-color: #fcfcfc;
+    background-color: #bad8f73a;
 }
 table.table-striped.table-hover tbody tr:hover {
-    background: #e7efff;
+    background: #b2cafa;
 }
 table.table th i {
     font-size: 13px;
@@ -74,7 +73,7 @@ table.table th i {
     cursor: pointer;
 }	
 table.table td:last-child i {
-    opacity: 0.9;
+    opacity: 0.3;
     font-size: 22px;
     margin: 0 5px;
 }
@@ -86,15 +85,6 @@ table.table td a {
     outline: none !important;
 }
 /*Colores de los botones de editar de cada fila*/
-table.table td a.edit {
-    color: #FFC107;
-}
-table.table td a.delete {
-    color: #F44336;
-}
-table.table td i {
-    font-size: 19px;
-}
 .buttons {
     display:inline-block;
     margin-right: 10px;

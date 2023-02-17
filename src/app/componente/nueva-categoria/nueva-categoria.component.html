@@ -10,41 +10,43 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
-    <form>
-        <div class="container mt-5 mb-5 d-flex justify-content-center">
-            <div class="card px-1 py-4">
-                <div class="card-body">
-                    <div class="row">
-                        <h4 class="title">Añadir Categoría</h4>
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <input autocomplete="off" id="cat_nombre" class="form-control" type="text" placeholder="Nombre" minlength="5" required
-                                [(ngModel)]="cat.cat_nombre" name="cat_nombre" #cat_nombre="ngModel">
-                                <div [hidden]="cat_nombre.valid || cat_nombre.pristine">
-                                    <div *ngIf="cat_nombre.errors?.['required']">
-                                        <div class="alert alert-warning d-flex align-items-center" role="alert">
-                                            <span class="material-symbols-outlined">warning</span>
-                                            <div>Este campo es requerido</div>
+    <div class="conjunto">
+        <form>
+            <div class="container mt-5 mb-5 d-flex justify-content-center">
+                <div class="card px-1 py-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <h4 class="title">Añadir Categoría</h4>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <input autocomplete="off" id="cat_nombre" class="form-control" type="text" placeholder="Nombre" minlength="5" required
+                                    [(ngModel)]="cat.cat_nombre" name="cat_nombre" #cat_nombre="ngModel">
+                                    <div [hidden]="cat_nombre.valid || cat_nombre.pristine">
+                                        <div *ngIf="cat_nombre.errors?.['required']">
+                                            <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                                <span class="material-symbols-outlined">warning</span>
+                                                <div>Este campo es requerido</div>
+                                            </div>
+                                        </div>
+                                        <div *ngIf="cat_nombre.errors?.['minlength']">
+                                            <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                                <span class="material-symbols-outlined">warning</span>
+                                                <div>El nombre debe tener mínimo 5 caracteres</div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div *ngIf="cat_nombre.errors?.['minlength']">
-                                        <div class="alert alert-warning d-flex align-items-center" role="alert">
-                                            <span class="material-symbols-outlined">warning</span>
-                                            <div>El nombre debe tener mínimo 5 caracteres</div>
-                                        </div>
-                                    </div>
+                                    <br>
+                                    <input id="descr" name="descr" class="form-control" type="text" [(ngModel)]="cat.cat_descripcion" placeholder="Descripción">
                                 </div>
-                                <br>
-                                <input id="descr" name="descr" class="form-control" type="text" [(ngModel)]="cat.cat_descripcion" placeholder="Descripción">
                             </div>
                         </div>
+                        <br>
+                        <button routerLink="/categorias" class="btn btn-primary confirm-button buttons"><span class="material-symbols-outlined">arrow_back</span></button>
+                        <button center [disabled]="cat_nombre.errors?.['minlength'] || cat_nombre.errors?.['required']" class="btn btn-success confirm-button buttons" (click)="insertar()">Añadir</button>
                     </div>
-                    <br>
-                    <button routerLink="/categorias" class="btn btn-primary confirm-button buttons"><span class="material-symbols-outlined">arrow_back</span></button>
-                    <button center [disabled]="cat_nombre.errors?.['minlength'] || cat_nombre.errors?.['required']" class="btn btn-success confirm-button buttons" (click)="insertar()">Añadir</button>
                 </div>
-            </div>
-        </div> 
-    </form>   
+            </div> 
+        </form>  
+    </div> 
 </body>
 

@@ -1,13 +1,21 @@
+.container{
+    background-color: #EDEFF0;
+}
+.conjunto{
+    background-color: #EDEFF0;
+}
 .card {
     width: 400px;
-    background-color: #65b5ff10;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #ffffff;
+    top: 100px;
     border: none;
     border-radius: 12px
 }
 label.radio input:checked {
     border-color: #039BE5;
     background-color: #81D4FA;
-    color: #fff;
+    color: #bddfec;
     border-radius: 9px;
     height: 48px;
     line-height: 27px
