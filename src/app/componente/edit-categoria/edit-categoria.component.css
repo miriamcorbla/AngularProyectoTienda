@@ -1,0 +1,37 @@
+.card {
+    width: 400px;
+    background-color: #65b5ff10;
+    border: none;
+    border-radius: 12px
+}
+label.radio input:checked {
+    border-color: #039BE5;
+    background-color: #81D4FA;
+    color: #fff;
+    border-radius: 9px;
+    height: 48px;
+    line-height: 27px
+}
+.form-control {
+    margin-top: 10px;
+    height: 48px;
+    border: 2px solid #eee;
+    border-radius: 10px
+}
+
+.confirm-button {
+    height: 50px;
+    border-radius: 10px
+}
+.buttons {
+    display:inline-block;
+    margin-right:5px;
+ }
+ .nameHelp{
+    margin-top: 5px;
+    margin-left: 10px;
+ }
+ .title{
+    color: #214c81; /*letras*/
+    text-align: center;
+ }

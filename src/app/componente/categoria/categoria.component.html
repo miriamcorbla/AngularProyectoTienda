@@ -37,7 +37,7 @@
 							<td [width]="200">{{cat.cat_nombre}}</td>
 							<td [width]="600">{{cat.cat_descripcion}}</td>
 							<td>
-								<button type="button" class="buttons btn btn-warning btn-circle"><span class="material-symbols-outlined">edit</span></button>      
+								<button routerLink="/categorias/editCategoria/+{{cat.id_categoria}}" type="button" class="buttons btn btn-warning btn-circle"><span class="material-symbols-outlined">edit</span></button>      
 								<button type="button" class="buttons btn btn-danger btn-circle" (click)="eliminar(cat.id_categoria)"><span class="material-symbols-outlined">delete</span></button>
 							</td>
 						</tr>							

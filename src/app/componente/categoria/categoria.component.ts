@@ -20,7 +20,7 @@ export class CategoriaComponent {
     //es mejor recibirla y procesarla
     dato.subscribe(
       (resp: any) => { //resp es mi respuesta de la bbdd. Mi lista de cosas
-        if(resp.codigo==302){ //si el codigo es correcto, empiezo a llenar las categorias
+        if(resp.codigo==200){ //si el codigo es correcto, empiezo a llenar las categorias
           this.listado = resp.datos as Categoria[];
         }
       })

@@ -23,6 +23,9 @@ export class ConexionService {
   deleteApi(url:string): Observable<any>{
     return this.http.delete(this.APIURL+url).pipe(share());
   }
+  editApi(url:string, dto:any): Observable<any>{
+    return this.http.put(this.APIURL+url, dto).pipe(share());
+  }
   //  return this.http.post(this.APIURL+url).pipe(share());
   //  return this.http.put(this.APIURL+url).pipe(share());
 
