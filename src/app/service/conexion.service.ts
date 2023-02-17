@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, share } from 'rxjs';
-import { Categoria } from '../interfaces/Categoria';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +17,12 @@ export class ConexionService {
     return this.http.get(this.APIURL+url).pipe(share());
   }
   //crear otro con post, otro con putApi, otro con deleteApi
+  insertApi(url:string, dto:any): Observable<any>{
+    return this.http.post(this.APIURL+url, dto).pipe(share());
+  }
+  deleteApi(url:string): Observable<any>{
+    return this.http.delete(this.APIURL+url).pipe(share());
+  }
   //  return this.http.post(this.APIURL+url).pipe(share());
   //  return this.http.put(this.APIURL+url).pipe(share());
 

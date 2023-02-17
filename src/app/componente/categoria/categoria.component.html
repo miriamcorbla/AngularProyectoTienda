@@ -19,8 +19,8 @@
 							<h2>Gestión de Categorías</h2>
 						</div>
 						<div class="col-xs-6">
-                            <a  class="btn btn-info" ><span class="material-symbols-outlined">search</span></a>                         
-                            <a routerLink="/categorias/nuevaCategoria" class="btn btn-success"><span class="material-symbols-outlined">add</span></a>				
+                            <button  class="btn btn-info" ><span class="material-symbols-outlined">search</span></button>                         
+                            <button routerLink="/categorias/nuevaCategoria" class="buttons btn btn-success"><span class="material-symbols-outlined">add</span></button>		
 						</div>
 					</div>
 				</div>
@@ -37,8 +37,8 @@
 							<td [width]="200">{{cat.cat_nombre}}</td>
 							<td [width]="600">{{cat.cat_descripcion}}</td>
 							<td>
-								<a href="#editarCategoria" class="edit buttons" ><span class="material-symbols-outlined">edit</span></a>                             
-								<a href="#eliminarCategoria" class="delete buttons" ><span class="material-symbols-outlined">delete</span></a>
+								<button type="button" class="buttons btn btn-warning btn-circle"><span class="material-symbols-outlined">edit</span></button>      
+								<button type="button" class="buttons btn btn-danger btn-circle" (click)="eliminar(cat.id_categoria)"><span class="material-symbols-outlined">delete</span></button>
 							</td>
 						</tr>							
 					</tbody>
