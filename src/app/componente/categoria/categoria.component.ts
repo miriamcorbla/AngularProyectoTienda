@@ -29,6 +29,12 @@ export class CategoriaComponent {
   ngOnInit():void{
   }
 
+  confirmacion(name: string, id:number) {
+    if(confirm("Va a eliminar la categoría "+name+ " ¿Está seguro?")) {
+      this.eliminar(id);
+    }
+  }
+
   eliminar(id_categoria:number): void{
     let miObservable: Observable<any> = this.conexion.deleteApi('categorias/'+id_categoria);
     miObservable.subscribe((resp: any) => {

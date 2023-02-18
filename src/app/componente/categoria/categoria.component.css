@@ -1,3 +1,7 @@
+.content {
+	flex: 1 1 0;
+	padding: 2rem;
+}
 body {
     background-color: #EDEFF0;
     font-family: 'Varela Round', sans-serif;
@@ -9,7 +13,7 @@ body {
 /* contenido de la tabla */
 .table-wrapper {
     min-width: 1000px;
-    background: #ffffff;
+    background: #e9edf357;
     padding: 20px 25px;
     border-radius: 3px;
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
@@ -97,4 +101,12 @@ table.table td a {
     text-align: center;
     font-size: 12px;
     line-height: 1.42857;
+}
+/*RESPONSIVE*/
+/*Esto va a hacer que la sidebar sea menos ancha si ponemos la pantalla más estrecha*/
+@media(max-width: 1024px){
+    .table-responsive{
+        max-height: 300px;
+        max-width: 500px;
+    }
 }

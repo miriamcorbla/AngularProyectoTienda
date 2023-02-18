@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fire Sans', sans-serif;
+}
+.app{
+    display: flex;
+    min-height: 100vh;
+}
+/*Sidebar Menu*/
+.sidebar{
+    flex: 1 1 0;
+    max-width: 300px;
+    padding: 2rem 1rem;
+    background-color: #3d5a80;
+}
+.sidebar h3{
+    color: #bbc0d8;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+.sidebar .menu{
+    margin: 0 -1rem;
+}
+.sidebar .menu .menu-item{
+    display: block;
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+/*Cuando pase el cursor*/
+.sidebar .menu .menu-item:hover,
+.sidebar .menu .menu-item.is-active {
+	color: #98c1d9;
+	border-right: 5px solid #98c1d9;
+}
+.active{
+    color: #98c1d9;
+	border-right: 5px solid #98c1d9;
+}
+/*Contenido del main*/
+.content {
+	flex: 1 1 0;
+	padding: 2rem;
+}
+
+.content h1 {
+	color: #3C3F58;
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.content p {
+	color: #707793;
+}
+/*RESPONSIVE*/
+/*Esto va a hacer que la sidebar sea menos ancha si ponemos la pantalla más estrecha*/
+@media(max-width: 1024px){
+    .sidebar{
+        max-width: 200px;
+    }
+}

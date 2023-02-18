@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { EditCategoriaComponent } from './componente/edit-categoria/edit-categoria.component';
 import { HeaderComponent } from './componente/header/header.component';
 import { FooterComponent } from './componente/footer/footer.component';
+import { SidebarComponent } from './componente/sidebar/sidebar.component';
+import { WelcomeComponent } from './componente/welcome/welcome.component';
+import { ContactoComponent } from './componente/contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { FooterComponent } from './componente/footer/footer.component';
     NuevaCategoriaComponent,
     EditCategoriaComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SidebarComponent,
+    WelcomeComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,

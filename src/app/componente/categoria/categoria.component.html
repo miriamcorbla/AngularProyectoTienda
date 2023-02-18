@@ -1,16 +1,5 @@
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap CRUD Data Table for Database with Modal Form</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-</head>
-<body>
-    <div class="container">
+<main>
+	<div class="container">
 		<div class="table-responsive">
 			<div class="table-wrapper">
 				<!-- Cabecera -->
@@ -20,8 +9,8 @@
 							<h2>Gestión de Categorías</h2>
 						</div>
 						<div class="col-xs-6">
-                            <button  class="btn btn-info" ><span class="material-symbols-outlined">search</span></button>                         
-                            <button routerLink="/categorias/nuevaCategoria" class="buttons btn btn-success"><span class="material-symbols-outlined">add</span></button>		
+							<button  class="btn btn-info" ><span class="material-symbols-outlined">search</span></button>                         
+							<button routerLink="/categorias/nuevaCategoria" class="buttons btn btn-success"><span class="material-symbols-outlined">add</span></button>		
 						</div>
 					</div>
 				</div>
@@ -40,12 +29,13 @@
 							<td [width]="600">{{cat.cat_descripcion}}</td>
 							<td>
 								<button routerLink="/categorias/editCategoria/+{{cat.id_categoria}}" type="button" class="buttons btn btn-warning btn-circle"><span class="material-symbols-outlined">edit</span></button>      
-								<button type="button" class="buttons btn btn-danger btn-circle" (click)="eliminar(cat.id_categoria)"><span class="material-symbols-outlined">delete</span></button>
+								<!-- <button type="button" class="buttons btn btn-danger btn-circle" (click)="eliminar(cat.id_categoria)"><span class="material-symbols-outlined">delete</span></button> -->
+								<button type="button" class="buttons btn btn-danger btn-circle" (click)="confirmacion(cat.cat_nombre, cat.id_categoria)"><span class="material-symbols-outlined">delete</span></button>
 							</td>
 						</tr>							
 					</tbody>
 				</table>
 			</div>
 		</div>        
-    </div>
-</body>
+	</div>
+</main>

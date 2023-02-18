@@ -1,3 +1,29 @@
-.inicio{
-    background-color: #EDEFF0;
+.parent {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .main {
+    display: flex;
+  }
+  .content {
+    flex-grow: 1;
+  }
+  /* --------- Non-flexbox related styles --------- */
+  .child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    color: #fff;
 }

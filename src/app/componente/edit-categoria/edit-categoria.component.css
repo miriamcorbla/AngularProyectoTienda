@@ -1,12 +1,12 @@
 .container{
-    background-color: #EDEFF0;
+    background-color: #ffffff;
 }
 .conjunto{
     background-color: #EDEFF0;
 }
 .card {
     width: 400px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(35, 11, 122, 0.2);
     background-color: #ffffff;
     top: 100px;
     border: none;
