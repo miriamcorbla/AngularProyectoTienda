@@ -6,7 +6,7 @@
   .main {
     display: flex;
   }
-  .content {
+  .contents {
     flex-grow: 1;
   }
   /* --------- Non-flexbox related styles --------- */
