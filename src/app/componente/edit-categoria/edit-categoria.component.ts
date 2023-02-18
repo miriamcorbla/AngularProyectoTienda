@@ -37,14 +37,21 @@ export class EditCategoriaComponent {
   modificar(): void{
     let miObservable: Observable<any> = this.conexion.editApi('categorias', this.cat);
     miObservable.subscribe((resp: any) => {
-      let status: number = resp.estado;
-      if(status == 301){
+      let status: number = resp[0];
+      if(status == 200){
         console.log("Modificado correctamente");
+        alert("Categoría " + this.cat.cat_nombre + " modificada con éxito.");
+      }else{
+        alert("ERROR. Ha sido imposible modificar la categoria: " +this.cat.cat_nombre + ".\nMensaje: " + JSON.stringify(resp[" mensaje"]));
       }
     })
-    this.router.navigate(['/categorias'])
-      .then(() => {
+    this.recarga();
+  }
+
+  recarga():void{
+    setTimeout(() => {this.router.navigate(['/categorias'])
+    .then(() => {
       window.location.reload();
-    });
+    })},500);
   }
 }

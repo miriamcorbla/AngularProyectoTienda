@@ -13,6 +13,7 @@ import { FooterComponent } from './componente/footer/footer.component';
 import { SidebarComponent } from './componente/sidebar/sidebar.component';
 import { WelcomeComponent } from './componente/welcome/welcome.component';
 import { ContactoComponent } from './componente/contacto/contacto.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ContactoComponent } from './componente/contacto/contacto.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

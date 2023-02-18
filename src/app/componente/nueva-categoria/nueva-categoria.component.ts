@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, timeout } from 'rxjs';
 import { Categoria } from 'src/app/interfaces/Categoria';
 import { ConexionService } from 'src/app/service/conexion.service';
 
@@ -13,7 +13,7 @@ import { ConexionService } from 'src/app/service/conexion.service';
 export class NuevaCategoriaComponent {
 
   cat: Categoria = {id_categoria:0, cat_nombre:'', cat_descripcion:''};
-  insertado:boolean = false;
+
   minLength: number = 5;
 
   constructor(private conexion: ConexionService, private router:Router){}
@@ -24,15 +24,19 @@ export class NuevaCategoriaComponent {
   insertar(): void{
     let miObservable: Observable<any> = this.conexion.insertApi('categorias', this.cat);
     miObservable.subscribe((resp: any) => {
-      let status: number = resp.estado;
-      if(status == 301){
+      let status: number = resp[0];
+      if(status == 201){
+        console.log(status);
         console.log("Insertado correctamente");
-        this.insertado = true;
+        alert("Categoría " + this.cat.cat_nombre + " guardada con éxito.");
       }
     })
-    this.router.navigate(['/categorias'])
-      .then(() => {
+    this.recarga();
+  }
+  recarga():void{
+    setTimeout(() => {this.router.navigate(['/categorias'])
+    .then(() => {
       window.location.reload();
-    });
+    })},500);
   }
 }
