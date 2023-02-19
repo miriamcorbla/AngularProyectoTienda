@@ -9,7 +9,13 @@
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 8px 0 rgba(35, 11, 122, 0.2);
+    background-color: white;
  }
+ .form-control{
+   box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px
+   rgba(0, 0, 0, 0.1);
+   border-radius: 12px;
+  }
  .mi-form h1{
     font-size: 30px;
     margin-bottom: 25px;

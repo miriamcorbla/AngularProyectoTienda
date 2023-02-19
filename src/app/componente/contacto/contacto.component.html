@@ -1,1 +1,24 @@
-<p>contacto works!</p>
+<div class="mi-form">
+  <div class="icono-mensaje">
+    <div style="text-align: center;"><i class="fa fa-envelope fa-5x" style="color:hsl(213, 44%, 45%)"></i></div>
+</div>
+<br>
+  <h1 class="text-center">¡Hablemos!</h1>
+  <h4>Si tiene alguna duda o incidencia, por favor, contacte con nosotros. Estaremos encantados de ayudarle.</h4>
+  <form>
+    <div class="form-group ">
+      <!-- NOMBRE -->
+      <input autocomplete="off" id="nombre" class="form-control" type="text" placeholder="Nombre" required
+        [(ngModel)]="nombre" name="nombre">
+      <br>
+      <!-- DESCRIPCION -->
+      <input id="email" name="email" class="form-control" type="text" [(ngModel)]="email" placeholder="Email">
+      <br>
+      <!-- DESCRIPCION -->
+      <textarea id="mensaje" name="mensaje" class="form-control" type="text" [(ngModel)]="mensaje" placeholder="Mensaje"></textarea>
+    </div>
+    <br>
+    <!-- BOTONES -->
+    <button class="btn btn-primary confirm-button buttons">Enviar</button>
+  </form>
+</div>

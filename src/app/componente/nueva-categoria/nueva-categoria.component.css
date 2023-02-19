@@ -1,36 +1,45 @@
  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
  }
  .mi-form{
-    width: 360px;
-    height: min-content;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px 0 rgba(35, 11, 122, 0.2);
+   width: 360px;
+   height: min-content;
+   padding: 20px;
+   border-radius: 12px;
+   box-shadow: 0 4px 8px 0 rgba(35, 11, 122, 0.2);
+   overflow: hidden;
+   background-color: white;
  }
  .mi-form h1{
-    font-size: 30px;
-    margin-bottom: 25px;
-    color: #42628b;
+   font-size: 30px;
+   margin-bottom: 25px;
+   color: #42628b;
  }
  .login form{
-    font-size: 20px;
+   font-size: 20px;
  }
  .login form .form-group{
-    margin-bottom: 12px;
+   margin-bottom: 12px;
+   
+ }
+ .form-control{
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px
+  rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
  }
  .confirm-button {
-    height: 50px;
-    border-radius: 10px;
+   height: 50px;
+   border-radius: 10px;
 }
 .buttons {
-    display:inline-block;
-    margin-right:5px;
+   display:inline-block;
+   margin-right:5px;
+   text-align: center;
  }
  .inner-mensaje {
-    padding-right:2px;
-    width: 100px;
-    display: inline-block;
+   padding-right:2px;
+   width: 100px;
+   display: inline-block;
 } 
