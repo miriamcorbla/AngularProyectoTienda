@@ -42,7 +42,7 @@ export class EditCategoriaComponent {
         console.log("Modificado correctamente");
         alert("Categoría " + this.cat.cat_nombre + " modificada con éxito.");
       }else{
-        alert("ERROR. Ha sido imposible modificar la categoria: " +this.cat.cat_nombre + ".\nMensaje: " + JSON.stringify(resp[" mensaje"]));
+        alert("ERROR. Ha sido imposible modificar la categoria: " +this.cat.cat_nombre + ".\nMensaje: " + JSON.stringify(resp["mensaje"]));
       }
     })
     this.recarga();

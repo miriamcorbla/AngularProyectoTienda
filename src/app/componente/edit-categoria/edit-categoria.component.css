@@ -1,45 +1,36 @@
-.container{
-    background-color: #ffffff;
-}
-.conjunto{
-    background-color: #EDEFF0;
-}
-.card {
-    width: 400px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ .mi-form{
+    width: 360px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
     box-shadow: 0 4px 8px 0 rgba(35, 11, 122, 0.2);
-    background-color: #ffffff;
-    top: 100px;
-    border: none;
-    border-radius: 12px
-}
-label.radio input:checked {
-    border-color: #039BE5;
-    background-color: #81D4FA;
-    color: #bddfec;
-    border-radius: 9px;
-    height: 48px;
-    line-height: 27px
-}
-.form-control {
-    margin-top: 10px;
-    height: 48px;
-    border: 2px solid #eee;
-    border-radius: 10px
-}
-
-.confirm-button {
+ }
+ .mi-form h1{
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #42628b;
+ }
+ .login form{
+    font-size: 20px;
+ }
+ .login form .form-group{
+    margin-bottom: 12px;
+ }
+ .confirm-button {
     height: 50px;
-    border-radius: 10px
+    border-radius: 10px;
 }
 .buttons {
     display:inline-block;
     margin-right:5px;
  }
- .nameHelp{
-    margin-top: 5px;
-    margin-left: 10px;
- }
- .title{
-    color: #214c81; /*letras*/
-    text-align: center;
- }
+ .inner-mensaje {
+    padding-right:2px;
+    width: 100px;
+    display: inline-block;
+}

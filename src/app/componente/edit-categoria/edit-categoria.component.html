@@ -1,52 +1,39 @@
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tabla</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-</head>
-<body>
-    <div class="conjunto">
-        <form method="get">
-            <div class="container mt-5 mb-5 d-flex justify-content-center">
-                <div class="card px-1 py-4">
-                    <div class="card-body">
-                        <div class="row">
-                            <h4 class="title">Modificar Categoría</h4>
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <input autocomplete="off" id="cat_nombre" class="form-control" type="text" placeholder={{cat.cat_nombre}} minlength="5" required
-                                    [(ngModel)]="cat.cat_nombre" name="cat_nombre" #cat_nombre="ngModel">
-                                    <div [hidden]="cat_nombre.valid || cat_nombre.pristine">
-                                        <div *ngIf="cat_nombre.errors?.['required']">
-                                            <div class="alert alert-warning d-flex align-items-center" role="alert">
-                                                <span class="material-symbols-outlined">warning</span>
-                                                <div>Este campo es requerido</div>
-                                            </div>
-                                        </div>
-                                        <div *ngIf="cat_nombre.errors?.['minlength']">
-                                            <div class="alert alert-warning d-flex align-items-center" role="alert">
-                                                <span class="material-symbols-outlined">warning</span>
-                                                <div>El nombre debe tener mínimo 5 caracteres</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <input id="descr" name="descr" class="form-control" type="text" [(ngModel)]="cat.cat_descripcion" placeholder={{cat.cat_descripcion}}>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <button routerLink="/categorias" class="btn btn-primary confirm-button buttons"><span class="material-symbols-outlined">arrow_back</span></button>
-                        <button center [disabled]="cat_nombre.errors?.['minlength'] || cat_nombre.errors?.['required']" class="btn btn-success confirm-button buttons" (click)="modificar()">Añadir</button>
+<div class="mi-form">
+    <h1 class="text-center">Modificar Categoría</h1>
+    <form>
+        <div class="form-group ">
+            <!-- NOMBRE -->
+            <input autocomplete="off" id="cat_nombre" class="form-control" type="text" placeholder="Nombre" minlength="5" required [(ngModel)]="cat.cat_nombre" 
+                name="cat_nombre" #cat_nombre="ngModel"
+            >     
+            <!-- COMPROBACIONES -->
+            <div [hidden]="cat_nombre.valid || cat_nombre.pristine">
+                <!-- Nombre obligatorio -->
+                <div *ngIf="cat_nombre.errors?.['required']">
+                    <div class="alert alert-warning d-flex align-items-center small" role="alert">
+                        <span class="material-symbols-outlined">warning</span>
+                        Este campo es requerido
                     </div>
                 </div>
-            </div> 
-        </form>   
-    </div>
-</body>
-
+                <!-- Longitud minima -->
+                <div *ngIf="cat_nombre.errors?.['minlength']">
+                    <div class="alert alert-warning d-flex align-items-center small" role="alert">
+                        <span class="material-symbols-outlined">warning</span>
+                        El nombre debe tener mínimo 5 caracteres
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- DESCRIPCION -->
+            <input id="descr" name="descr" class="form-control" type="text" [(ngModel)]="cat.cat_descripcion" placeholder="Descripción">
+        </div>
+        <br>
+        <!-- BOTONES -->
+        <div class="buttons">
+            <button routerLink="/categorias" class="btn btn-primary confirm-button buttons"><span class="material-symbols-outlined">arrow_back</span></button>
+            <button center [disabled]="cat_nombre.errors?.['minlength'] || cat_nombre.errors?.['required']" class="btn btn-success confirm-button buttons" 
+                (click)="modificar()">Modificar</button
+            >
+        </div>
+    </form>
+</div>

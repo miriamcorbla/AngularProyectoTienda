@@ -51,6 +51,8 @@ export class CategoriaComponent {
         .then(() => {
         window.location.reload();
         });
+      }else{
+        alert("ERROR. Ha sido imposible eliminar la categoria.\nMensaje: " + JSON.stringify(resp["mensaje"]));
       }
     })
 

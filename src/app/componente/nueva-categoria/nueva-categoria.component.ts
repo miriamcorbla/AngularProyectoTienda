@@ -29,6 +29,9 @@ export class NuevaCategoriaComponent {
         console.log(status);
         console.log("Insertado correctamente");
         alert("Categoría " + this.cat.cat_nombre + " guardada con éxito.");
+      }else{
+        console.log(resp);
+        alert("ERROR. Ha sido imposible añadir la categoria: " +this.cat.cat_nombre + ".\nMensaje: " + JSON.stringify(resp["mensaje"]));
       }
     })
     this.recarga();
