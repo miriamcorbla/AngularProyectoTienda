@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Categoria } from '../interfaces/Categoria';
 
 @Pipe({
   name: 'filtro'

@@ -4,6 +4,7 @@
 </head>
 <main>
 	<div class="container">
+		<input id="buscador" class="form-control buscador" type="text" placeholder="Buscar..." [(ngModel)]="buscador">
 		<div class="table-responsive">
 			<div class="table-wrapper">
 				<!-- Cabecera -->
@@ -13,7 +14,6 @@
 							<h2>Gestión de Categorías</h2>
 						</div>
 						<div class="col-xs-6">
-							<input id="buscador" class="form-control" type="text" placeholder="Buscar..." [(ngModel)]="buscador"> 
 							<button routerLink="/categorias/nuevaCategoria" class="buttons btn btn-success"><span
 									class="material-symbols-outlined">add</span></button>
 						</div>
