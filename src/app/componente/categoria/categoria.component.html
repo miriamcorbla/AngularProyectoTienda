@@ -1,3 +1,7 @@
+<head>
+	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
 <main>
 	<div class="container">
 		<div class="table-responsive">
@@ -9,8 +13,8 @@
 							<h2>Gestión de Categorías</h2>
 						</div>
 						<div class="col-xs-6">
-							<button  class="btn btn-info" ><span class="material-symbols-outlined">search</span></button>                         
-							<button routerLink="/categorias/nuevaCategoria" class="buttons btn btn-success"><span class="material-symbols-outlined">add</span></button>		
+							<button routerLink="/categorias/nuevaCategoria" class="buttons btn btn-success"><span
+									class="material-symbols-outlined">add</span></button>
 						</div>
 					</div>
 				</div>
@@ -28,14 +32,22 @@
 							<td [width]="200">{{cat.cat_nombre}}</td>
 							<td [width]="600">{{cat.cat_descripcion}}</td>
 							<td>
-								<button routerLink="/categorias/editCategoria/+{{cat.id_categoria}}" type="button" class="buttons btn btn-warning btn-circle"><span class="material-symbols-outlined">edit</span></button>      
+								<button routerLink="/categorias/editCategoria/+{{cat.id_categoria}}" type="button"
+									class="buttons btn btn-warning btn-circle"><span
+										class="material-symbols-outlined">edit</span></button>
 								<!-- <button type="button" class="buttons btn btn-danger btn-circle" (click)="eliminar(cat.id_categoria)"><span class="material-symbols-outlined">delete</span></button> -->
-								<button type="button" class="buttons btn btn-danger btn-circle" (click)="confirmacion(cat.cat_nombre, cat.id_categoria)"><span class="material-symbols-outlined">delete</span></button>
+								<button type="button" class="buttons btn btn-danger btn-circle"
+									(click)="confirmacion(cat.cat_nombre, cat.id_categoria)"><span
+										class="material-symbols-outlined">delete</span></button>
 							</td>
-						</tr>							
+						</tr>
 					</tbody>
 				</table>
+				<!-- <div class="buscar-container">
+					<input type="text" name="search" placeholder="Buscar..." class="search-input"><a
+						class="search-btn"><i class="fas fa-search" [(ngModel)]="search" (click)="findName(search)"></i></a>	
+				</div>	 -->
 			</div>
-		</div>        
+		</div>
 	</div>
 </main>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ConexionService } from './service/conexion.service';
+import { AccountService } from './service/account.service';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +9,9 @@ import { ConexionService } from './service/conexion.service';
 })
 export class AppComponent {
   title = 'TiendaIncienso';
+  constructor( public nav: AccountService ) {}
+
+  ngOnInit() {
+    this.nav.show();
+  }
 }

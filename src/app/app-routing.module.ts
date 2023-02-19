@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
 import { CategoriaComponent } from './componente/categoria/categoria.component';
 import { ContactoComponent } from './componente/contacto/contacto.component';
 import { EditCategoriaComponent } from './componente/edit-categoria/edit-categoria.component';
