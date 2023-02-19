@@ -13,6 +13,7 @@
 							<h2>Gestión de Categorías</h2>
 						</div>
 						<div class="col-xs-6">
+							<input id="buscador" class="form-control" type="text" placeholder="Buscar..." [(ngModel)]="buscador"> 
 							<button routerLink="/categorias/nuevaCategoria" class="buttons btn btn-success"><span
 									class="material-symbols-outlined">add</span></button>
 						</div>
@@ -28,7 +29,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr *ngFor="let cat of listado">
+						<tr *ngFor="let cat of listado | filtro: buscador">
 							<td [width]="200">{{cat.cat_nombre}}</td>
 							<td [width]="600">{{cat.cat_descripcion}}</td>
 							<td>
@@ -43,10 +44,6 @@
 						</tr>
 					</tbody>
 				</table>
-				<!-- <div class="buscar-container">
-					<input type="text" name="search" placeholder="Buscar..." class="search-input"><a
-						class="search-btn"><i class="fas fa-search" [(ngModel)]="search" (click)="findName(search)"></i></a>	
-				</div>	 -->
 			</div>
 		</div>
 	</div>

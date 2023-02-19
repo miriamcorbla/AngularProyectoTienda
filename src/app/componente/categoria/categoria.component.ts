@@ -11,7 +11,7 @@ import { ConexionService } from 'src/app/service/conexion.service';
 })
 export class CategoriaComponent {
 
-  search:string = '';
+  buscador:string ='';
   eliminado:boolean = false;
   categoria:Categoria = {id_categoria:0, cat_nombre:'', cat_descripcion:''};
 
@@ -58,11 +58,5 @@ export class CategoriaComponent {
       }
     })
 
-  }
-
-  findName(name:string): Categoria{
-    this.categoria = <Categoria> this.listado.find(cat => cat.cat_nombre == name);
-    console.log(this.categoria.id_categoria);
-    return this.categoria;  
   }
 }

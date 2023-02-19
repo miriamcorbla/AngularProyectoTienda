@@ -15,6 +15,7 @@ import { WelcomeComponent } from './componente/welcome/welcome.component';
 import { ContactoComponent } from './componente/contacto/contacto.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './componente/login/login.component';
+import { FiltroPipe } from './pipe/filtro.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LoginComponent } from './componente/login/login.component';
     SidebarComponent,
     WelcomeComponent,
     ContactoComponent,
-    LoginComponent
+    LoginComponent,
+    FiltroPipe
   ],
   imports: [
     BrowserModule,
